@@ -15,13 +15,13 @@ public class Main {
     public static void ft_quickSort(int[] mass, int low, int high)
     {
         if (mass.length == 0)
-            return ;
+            return;
         if (low >= high)
-            return ;
-        int mediana = low + (high - low) / 2;
+            return;
         int i = low;
         int j = high;
-        int pivot = mass[mediana];
+        int median = low + (high - low) / 2;
+        int pivot = mass[median];
 
         while (i <= j)
         {
@@ -42,7 +42,6 @@ public class Main {
             ft_quickSort(mass, low, j);
         if (high > i)
             ft_quickSort(mass, i, high);
-
     }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
